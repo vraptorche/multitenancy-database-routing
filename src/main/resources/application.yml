@@ -1,0 +1,14 @@
+multitenancy:
+  datasources:
+    one:
+      url: jdbc:hsqldb:mem:tenant_one
+      username: SA
+      password:
+    two:
+      url: jdbc:hsqldb:mem:tenant_two
+      username: SA
+      password:
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
