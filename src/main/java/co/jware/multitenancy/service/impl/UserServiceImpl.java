@@ -25,6 +25,8 @@ public class UserServiceImpl implements UserService {
     @Override
     @DatabaseRouting
     public User createUser(String userName, @TenantId String tenantId) {
-        return null;
+        User user = new User();
+        user.setUserName(userName);
+        return repository.save(user);
     }
 }

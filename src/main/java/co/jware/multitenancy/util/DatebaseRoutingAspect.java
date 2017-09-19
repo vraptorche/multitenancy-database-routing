@@ -28,8 +28,8 @@ public class DatebaseRoutingAspect {
     public void atExecution() {
     }
 
-    @Around("@annotation(databaseRouting)")
-    public Object switchDatabase(ProceedingJoinPoint pjp, DatabaseRouting databaseRouting) throws Throwable {
+    @Around("atExecution() && databaseRouting()")
+    public Object switchDatabase(ProceedingJoinPoint pjp) throws Throwable {
         String tenantId = retrieveTenantId(pjp);
         try {
             if (null != tenantId) {

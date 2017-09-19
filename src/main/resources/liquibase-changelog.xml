@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet id="multi-tenancy-1.0-1" author="vraptor">
+        <createTable tableName="users">
+            <column name="id" type="bigint" autoIncrement="true"/>
+            <column name="version" type="bigint"/>
+            <column name="user_name" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="multi-tenancy-1.0-2" author="vraptor">
+        <addPrimaryKey tableName="users" columnNames="id"/>
+    </changeSet>
+</databaseChangeLog>

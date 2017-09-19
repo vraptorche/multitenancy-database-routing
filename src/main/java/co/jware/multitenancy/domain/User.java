@@ -15,7 +15,7 @@ import org.springframework.data.domain.Persistable;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table(name = "user")
+@Table(name = "users")
 @Entity
 @Getter
 @Setter
